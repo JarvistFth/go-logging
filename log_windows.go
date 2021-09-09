@@ -37,20 +37,20 @@ const (
 
 var (
 	colors = []uint16{
-		INFO:     fgWhite,
-		CRITICAL: fgMagenta,
-		ERROR:    fgRed,
-		WARNING:  fgYellow,
-		NOTICE:   fgGreen,
-		DEBUG:    fgCyan,
+		INFO:   fgWhite,
+		FATAL:  fgMagenta,
+		ERROR:  fgRed,
+		WARN:   fgYellow,
+		NOTICE: fgGreen,
+		DEBUG:  fgCyan,
 	}
 	boldcolors = []uint16{
-		INFO:     fgWhite | fgIntensity,
-		CRITICAL: fgMagenta | fgIntensity,
-		ERROR:    fgRed | fgIntensity,
-		WARNING:  fgYellow | fgIntensity,
-		NOTICE:   fgGreen | fgIntensity,
-		DEBUG:    fgCyan | fgIntensity,
+		INFO:   fgWhite | fgIntensity,
+		FATAL:  fgMagenta | fgIntensity,
+		ERROR:  fgRed | fgIntensity,
+		WARN:   fgYellow | fgIntensity,
+		NOTICE: fgGreen | fgIntensity,
+		DEBUG:  fgCyan | fgIntensity,
 	}
 )
 

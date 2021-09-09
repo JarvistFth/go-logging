@@ -18,18 +18,18 @@ type Level int
 
 // Log levels.
 const (
-	CRITICAL Level = iota
+	FATAL Level = iota
 	ERROR
-	WARNING
+	WARN
 	NOTICE
 	INFO
 	DEBUG
 )
 
 var levelNames = []string{
-	"CRITICAL",
+	"FATAL",
 	"ERROR",
-	"WARNING",
+	"WARN",
 	"NOTICE",
 	"INFO",
 	"DEBUG",

@@ -172,36 +172,36 @@ func (l *Logger) log(lvl Level, format *string, args ...interface{}) {
 
 // Fatal is equivalent to l.Critical(fmt.Sprint()) followed by a call to os.Exit(1).
 func (l *Logger) Fatal(args ...interface{}) {
-	l.log(CRITICAL, nil, args...)
+	l.log(FATAL, nil, args...)
 	os.Exit(1)
 }
 
 // Fatalf is equivalent to l.Critical followed by a call to os.Exit(1).
 func (l *Logger) Fatalf(format string, args ...interface{}) {
-	l.log(CRITICAL, &format, args...)
+	l.log(FATAL, &format, args...)
 	os.Exit(1)
 }
 
 // Panic is equivalent to l.Critical(fmt.Sprint()) followed by a call to panic().
 func (l *Logger) Panic(args ...interface{}) {
-	l.log(CRITICAL, nil, args...)
+	l.log(FATAL, nil, args...)
 	panic(fmt.Sprint(args...))
 }
 
 // Panicf is equivalent to l.Critical followed by a call to panic().
 func (l *Logger) Panicf(format string, args ...interface{}) {
-	l.log(CRITICAL, &format, args...)
+	l.log(FATAL, &format, args...)
 	panic(fmt.Sprintf(format, args...))
 }
 
-// Critical logs a message using CRITICAL as log level.
+// Critical logs a message using FATAL as log level.
 func (l *Logger) Critical(args ...interface{}) {
-	l.log(CRITICAL, nil, args...)
+	l.log(FATAL, nil, args...)
 }
 
-// Criticalf logs a message using CRITICAL as log level.
+// Criticalf logs a message using FATAL as log level.
 func (l *Logger) Criticalf(format string, args ...interface{}) {
-	l.log(CRITICAL, &format, args...)
+	l.log(FATAL, &format, args...)
 }
 
 // Error logs a message using ERROR as log level.
@@ -214,14 +214,14 @@ func (l *Logger) Errorf(format string, args ...interface{}) {
 	l.log(ERROR, &format, args...)
 }
 
-// Warning logs a message using WARNING as log level.
+// Warning logs a message using WARN as log level.
 func (l *Logger) Warning(args ...interface{}) {
-	l.log(WARNING, nil, args...)
+	l.log(WARN, nil, args...)
 }
 
-// Warningf logs a message using WARNING as log level.
+// Warningf logs a message using WARN as log level.
 func (l *Logger) Warningf(format string, args ...interface{}) {
-	l.log(WARNING, &format, args...)
+	l.log(WARN, &format, args...)
 }
 
 // Notice logs a message using NOTICE as log level.

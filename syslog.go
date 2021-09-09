@@ -35,11 +35,11 @@ func NewSyslogBackendPriority(prefix string, priority syslog.Priority) (b *Syslo
 func (b *SyslogBackend) Log(level Level, calldepth int, rec *Record) error {
 	line := rec.Formatted(calldepth + 1)
 	switch level {
-	case CRITICAL:
+	case FATAL:
 		return b.Writer.Crit(line)
 	case ERROR:
 		return b.Writer.Err(line)
-	case WARNING:
+	case WARN:
 		return b.Writer.Warning(line)
 	case NOTICE:
 		return b.Writer.Notice(line)

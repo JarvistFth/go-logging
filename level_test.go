@@ -29,7 +29,7 @@ func TestLevelLogLevel(t *testing.T) {
 		{-1, "bla"},
 		{INFO, "iNfO"},
 		{ERROR, "error"},
-		{WARNING, "warninG"},
+		{WARN, "warninG"},
 	}
 
 	for _, test := range tests {
@@ -54,7 +54,7 @@ func TestLevelModuleLevel(t *testing.T) {
 	leveled.SetLevel(NOTICE, "")
 	leveled.SetLevel(ERROR, "foo")
 	leveled.SetLevel(INFO, "foo.bar")
-	leveled.SetLevel(WARNING, "bar")
+	leveled.SetLevel(WARN, "bar")
 
 	expected := []struct {
 		level  Level
@@ -64,7 +64,7 @@ func TestLevelModuleLevel(t *testing.T) {
 		{NOTICE, "something"},
 		{ERROR, "foo"},
 		{INFO, "foo.bar"},
-		{WARNING, "bar"},
+		{WARN, "bar"},
 	}
 
 	for _, e := range expected {

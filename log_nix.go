@@ -28,18 +28,18 @@ const (
 
 var (
 	colors = []string{
-		CRITICAL: ColorSeq(ColorMagenta),
-		ERROR:    ColorSeq(ColorRed),
-		WARNING:  ColorSeq(ColorYellow),
-		NOTICE:   ColorSeq(ColorGreen),
-		DEBUG:    ColorSeq(ColorCyan),
+		FATAL: ColorSeq(ColorMagenta),
+		ERROR: ColorSeq(ColorRed),
+		WARN:  ColorSeq(ColorYellow),
+		INFO:  ColorSeq(ColorGreen),
+		DEBUG: ColorSeq(ColorCyan),
 	}
 	boldcolors = []string{
-		CRITICAL: ColorSeqBold(ColorMagenta),
-		ERROR:    ColorSeqBold(ColorRed),
-		WARNING:  ColorSeqBold(ColorYellow),
-		NOTICE:   ColorSeqBold(ColorGreen),
-		DEBUG:    ColorSeqBold(ColorCyan),
+		FATAL: ColorSeqBold(ColorMagenta),
+		ERROR: ColorSeqBold(ColorRed),
+		WARN:  ColorSeqBold(ColorYellow),
+		INFO:  ColorSeqBold(ColorGreen),
+		DEBUG: ColorSeqBold(ColorCyan),
 	}
 )
 
